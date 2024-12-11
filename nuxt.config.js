@@ -160,11 +160,13 @@ const nuxtConfig = {
     lazy: true,
     langDir: 'lang/',
     locales: [
-      {code: 'en', name: 'English', file: 'en_US.js'}
+      {code: 'en', name: 'English ', file: 'en_US.js'},
+      {code: 'pt', name: 'Português ', file: 'pt_BR.js'},
+      {code: 'es', name: 'Español ', file: 'es_ES.js'}
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'pt',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'pt',
     },
     detectBrowserLanguage: {
       useCookie: true,
