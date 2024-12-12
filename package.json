@@ -1,6 +1,6 @@
 {
-  "name": "karngyan.com",
-  "author": "Karn",
+  "name": "updated-portfolio",
+  "author": "FernandoAurelius",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -53,5 +53,8 @@
   },
   "resolutions": {
     "pdfjs-dist": "2.5.207"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
