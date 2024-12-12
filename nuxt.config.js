@@ -114,6 +114,7 @@ const nuxtConfig = {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv',
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
