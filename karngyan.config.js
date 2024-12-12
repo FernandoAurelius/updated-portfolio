@@ -132,47 +132,49 @@ export default {
       },
       achievements: {
         goals: {
-          header: 'Personal Goals',
-          shortTerm: 'Short Term',
-          midTerm: 'Mid Term',
-          longTerm: 'Long Term',
+          header: "My Professional Goals",
+          shortTerm: "Short Term",
+          midTerm: "Mid Term",
+          longTerm: "Long Term",
           shortTermItems: [
-            { icon: '🎯', text: 'Master AWS Cloud Services' },
-            { icon: '💻', text: 'Complete Vue.js Advanced Course' },
-            { icon: '📱', text: 'Build Mobile-First Applications' }
+            { icon: "📜", text: "Obtain AWS Certified Developer – Associate certification" },
+            { icon: "♨️", text: "Obtain Oracle Certified Associate - Java SE 8 I and II certifications to certify my knowledge and expertise in Java" },
+            { icon: "🔧", text: "Deepen knowledge of Java and Spring Boot for professional backend development" },
           ],
           midTermItems: [
-            { icon: '🚀', text: 'Launch Personal SaaS Product' },
-            { icon: '📊', text: 'Expand Freelance Business' },
-            { icon: '🌐', text: 'Contribute to Open Source' }
+            { icon: "🚀", text: "Participate in tech events such as hackathons, conferences, expositions, meetups and workshops to adquire knowledge and create network" },
+            { icon: "🌍", text: "Contribute regularly to open-source projects in cloud and AI" },
+            { icon: "💼", text: "Grow skills in DevOps practices with AWS and container orchestration with Docker + Kubernetes" }
           ],
           longTermItems: [
-            { icon: '⭐', text: 'Become a Senior Developer' },
-            { icon: '🎓', text: 'Complete Masters Degree' },
-            { icon: '🌟', text: 'Start Tech Consultancy' }
+            { icon: "⭐", text: "Become a Full-stack developer specializing in cloud solutions" },
+            { icon: "🎓", text: "Pursue a degree in AI or Data Science alongside professional certifications" },
+            { icon: "🌟", text: "Start a tech consultancy or SaaS company focused on innovation" }
           ]
         },
         professional: {
-          title: 'Professional Experience', // Changed from header to title
-          items: [ // Changed to items array
+          title: 'Professional Experience',
+          items: [
             {
               company: 'Arqdigital T.I',
               position: 'IT Support Specialist',
-              period: '2022 - Present',
+              period: '2024 - Present',
               achievements: [
-                'Managed infrastructure and cloud services',
-                'Provided technical support to clients',
-                'Implemented automation solutions'
+                'Managed infrastructure and IT environment administration with AnyDesk, Microsoft Admin Center, Intune, and Azure Entra ID',
+                'Provided diverse technical support to collaborators in network, IT hardware support, and troubleshooting',
+                'Implemented automation solutions for infrastructure and IT support demands'
               ]
             },
             {
               company: 'Upwork',
-              position: 'IT Support Specialist',
-              period: '2021 - Present',
+              position: 'Freelance Full-stack Developer',
+              period: '2023 - Present',
               achievements: [
-                'Provided technical support to clients',
-                'Implemented automation solutions'
-              ] 
+                'Creating user interfaces using HTML, CSS, and JavaScript',
+                'Building server-side logic and APIs using Django and Java',
+                'Creating and managing SQL databases such as PostgreSQL and MySQL to store and retrieve data',
+                'Integrating with third-party APIs to extend functionality (e.g., payment gateways, social media, mapping services)'
+              ]
             }
           ]
         },
@@ -180,23 +182,23 @@ export default {
           header: 'Academic Journey',
           current: [
             {
-              institution: 'Your University',
-              program: 'Computer Science',
-              graduation: 'Expected Graduation: 2024'
+              institution: "CEMI Cruzeiro",
+              program: "Technical Course in Internet Informatics",
+              graduation: "Expected Graduation: 2025"
             }
           ],
           currentTitle: 'Current Education',
           achievementsTitle: 'Achievements',
           achievements: [
             {
-              icon: '🏆',
-              title: 'Dean\'s List',
-              description: 'Maintained high academic performance'
+              icon: "🏆",
+              title: "AWS Builders League Finalist",
+              description: "3rd place in the 2024 AWS Builders League: Generative AI Edition."
             },
             {
-              icon: '🎖️',
-              title: 'Hackathon Winner',
-              description: 'First place in university hackathon'
+              icon: '⛅',
+              title: 'First IT organization-issued certification in Cloud',
+              description: 'Recently earned the AWS Certified Cloud Practitioner certification'
             }
           ]
         }
@@ -244,189 +246,193 @@ export default {
         subtext: 'o que dizem meus mentores'
       },
       achievements: {
-          goals: {
-            header: 'Metas Pessoais',
-            shortTerm: 'Curto Prazo',
-            midTerm: 'Médio Prazo',
-            longTerm: 'Longo Prazo',
-            shortTermItems: [
-              { icon: '🎯', text: 'Dominar Serviços em Nuvem AWS' },
-              { icon: '💻', text: 'Concluir Curso Avançado de Vue.js' },
-              { icon: '📱', text: 'Desenvolver Aplicações Mobile-First' }
-            ],
-            midTermItems: [
-              { icon: '🚀', text: 'Lançar Produto SaaS Pessoal' },
-              { icon: '📊', text: 'Expandir Negócio Freelancer' },
-              { icon: '🌐', text: 'Contribuir para Projetos Open Source' }
-            ],
-            longTermItems: [
-              { icon: '⭐', text: 'Tornar-se Desenvolvedor Sênior' },
-              { icon: '🎓', text: 'Concluir Mestrado' },
-              { icon: '🌟', text: 'Iniciar Consultoria de Tecnologia' }
-            ]
-          },
-          professional: {
-            title: 'Experiência Profissional',
-            items: [
-              {
-                company: 'Arqdigital T.I',
-                position: 'Especialista em Suporte de TI',
-                period: '2022 - Presente',
-                achievements: [
-                  'Gerenciamento de infraestrutura e serviços em nuvem',
-                  'Suporte técnico para clientes',
-                  'Implementação de soluções de automação'
-                ]
-              },
-              {
-                company: 'Upwork',
-                position: 'Especialista em Suporte de TI',
-                period: '2021 - Presente',
-                achievements: [
-                  'Suporte técnico para clientes',
-                  'Implementação de soluções de automação'
-                ]
-              }
-            ]
-          },
-          education: {
-            header: 'Trajetória Acadêmica',
-            current: [
-              {
-                institution: 'Sua Universidade',
-                program: 'Ciência da Computação',
-                graduation: 'Conclusão Prevista: 2024'
-              }
-            ],
-            currentTitle: 'Educação Atual',
-            achievementsTitle: 'Conquistas',
-            achievements: [
-              {
-                icon: '🏆',
-                title: 'Lista do Diretor',
-                description: 'Manteve alto desempenho acadêmico'
-              },
-              {
-                icon: '🎖️',
-                title: 'Vencedor de Hackathon',
-                description: 'Primeiro lugar em hackathon universitário'
-              }
-            ]
-          }
+        goals: {
+          header: "Meus Objetivos Profissionais",
+          shortTerm: "Curto Prazo",
+          midTerm: "Médio Prazo",
+          longTerm: "Longo Prazo",
+          shortTermItems: [
+            { icon: "📜", text: "Obter a certificação AWS Certified Developer – Associate" },
+            { icon: "♨️", text: "Obter as certificações Oracle Certified Associate - Java SE 8 I e II para certificar meu conhecimento e experiência em Java" },
+            { icon: "🔧", text: "Aprofundar conhecimento em Java e Spring Boot para desenvolvimento backend profissional" }
+          ],
+          midTermItems: [
+            { icon: "🚀", text: "Participar de eventos de tecnologia como hackathons, conferências, exposições, meetups e workshops para adquirir conhecimento e criar rede" },
+            { icon: "🌍", text: "Contribuir regularmente para projetos open-source em cloud e IA" },
+            { icon: "💼", text: "Desenvolver habilidades em práticas DevOps com AWS e orquestração de containers com Docker + Kubernetes" }
+          ],
+          longTermItems: [
+            { icon: "⭐", text: "Tornar-me um desenvolvedor Full-stack especializado em soluções cloud" },
+            { icon: "🎓", text: "Buscar um diploma em IA ou Ciência de Dados juntamente com certificações profissionais" },
+            { icon: "🌟", text: "Iniciar uma consultoria de tecnologia ou empresa SaaS focada em inovação" }
+          ]
+        },
+        professional: {
+          title: 'Experiência Profissional',
+          items: [
+            {
+              company: 'Arqdigital T.I',
+              position: 'Especialista em Suporte de TI',
+              period: '2024 - Presente',
+              achievements: [
+                'Gerenciamento de infraestrutura e administração de ambientes de TI com AnyDesk, Microsoft Admin Center, Intune e Azure Entra ID',
+                'Fornecimento de suporte técnico variado a colaboradores em assuntos de rede, suporte de hardware de TI e resolução de problemas',
+                'Implementação de soluções de automação para infraestrutura e demandas de suporte de TI'
+              ]
+            },
+            {
+              company: 'Upwork',
+              position: 'Desenvolvedor Full-stack Freelancer',
+              period: '2023 - Presente',
+              achievements: [
+                'Criação interfaces de usuário usando HTML, CSS e JavaScript',
+                'Construção de lógica de servidor e APIs usando Django e Java',
+                'Criação e gerenciamento de bancos de dados SQL como PostgreSQL e MySQL para armazenar e recuperar dados',
+                'Integração com APIs de terceiros para expandir a funcionalidade (por exemplo, gateways de pagamento, mídia social, serviços de mapeamento)'
+              ]
+            }
+          ]
+        },
+        education: {
+          header: 'Trajetória Acadêmica',
+          current: [
+            {
+              institution: "CEMI Cruzeiro",
+              program: "Curso Técnico em Informática para Internet",
+              graduation: "Conclusão Esperada: 2025"
+            }
+          ],
+          currentTitle: 'Educação Atual',
+          achievementsTitle: 'Conquistas',
+          achievements: [
+            {
+              icon: "🏆",
+              title: "Finalista da AWS Builders League",
+              description: "3º lugar na AWS Builders League 2024: Edição Generative AI."
+            },
+            {
+              icon: '⛅',
+              title: "Primeira certificação em Cloud emitida por organização de TI",
+              description: 'Recentemente obtida a certificação AWS Certified Cloud Practitioner, como prova de proficiência em tecnologias da Nuvem AWS'
+            }
+          ]
         }
-    },      
+      }
+    },
     es_ES: {
-        download: 'descargar',
-        nav: {
-          home: 'inicio',
-          blog: 'blog',
-          projects: 'proyectos',
-          uses: 'herramientas',
-          resume: 'currículum',
-          buyMeACoffee: 'invítame una cerveza',
-          signIn: 'iniciar sesión',
-          signOut: 'cerrar sesión'
+      download: 'descargar',
+      nav: {
+        home: 'inicio',
+        blog: 'blog',
+        projects: 'proyectos',
+        uses: 'herramientas',
+        resume: 'currículum',
+        buyMeACoffee: 'invítame una cerveza',
+        signIn: 'iniciar sesión',
+        signOut: 'cerrar sesión'
+      },
+      hero: {
+        friendlyNeighborhood: 'tu desarrollador dedicado',
+        description: 'soy desarrollador de software, especialista en soporte de TI y asistente de infraestructura (también entusiasta de la nube/IA)',
+        words: ['desarrollador', 'especialista en soporte de TI', 'programador', 'codificador'],
+      },
+      githubCalendar: {
+        header: 'contribuciones',
+        subtext: 'calendario de contribuciones de github'
+      },
+      blog: {
+        header: 'blog',
+        subtext: ''
+      },
+      recentBlog: {
+        header: 'blogs recientes',
+        subtext: ''
+      },
+      uses: {
+        header: 'herramientas',
+        subtext: 'un resumen rápido de lo que uso a diario para programar y algunas estadísticas de codestats.net'
+      },
+      projects: {
+        header: 'proyectos',
+        subtext: 'esta página lista algunos de mis proyectos personales y laborales. cada proyecto tiene una historia; haz clic en el título para leer'
+      },
+      recommendations: {
+        header: 'recomendaciones',
+        subtext: 'qué dicen mis mentores'
+      },
+      achievements: {
+        goals: {
+          header: "Mis Objetivos Profesionales",
+          shortTerm: "Corto Plazo",
+          midTerm: "Medio Plazo",
+          longTerm: "Largo Plazo",
+          shortTermItems: [
+            { icon: "📜", text: "Obtener la certificación AWS Certified Developer – Associate" },
+            { icon: "♨️", text: "Obtener las certificaciones Oracle Certified Associate - Java SE 8 I y II para certificar mi conocimiento y experiencia en Java" },
+            { icon: "🔧", text: "Profundizar conocimientos en Java y Spring Boot para desarrollo backend profesional" }
+          ],
+          midTermItems: [
+            { icon: "🚀", text: "Participar en eventos tecnológicos como hackathons, conferencias, exposiciones, meetups y talleres para adquirir conocimiento y crear red" },
+            { icon: "🌍", text: "Contribuir regularmente a proyectos de código abierto en cloud e IA" },
+            { icon: "💼", text: "Desarrollar habilidades en prácticas DevOps con AWS y orquestación de contenedores con Docker + Kubernetes" }
+          ],
+          longTermItems: [
+            { icon: "⭐", text: "Convertirme en un desarrollador Full-stack especializado en soluciones cloud" },
+            { icon: "🎓", text: "Cursar una carrera en IA o Ciencia de Datos junto con certificaciones profesionales" },
+            { icon: "🌟", text: "Iniciar una consultoría tecnológica o empresa SaaS enfocada en innovación" }
+          ]
         },
-        hero: {
-          friendlyNeighborhood: 'tu desarrollador dedicado',
-          description: 'soy desarrollador de software, especialista en soporte de TI y asistente de infraestructura (también entusiasta de la nube/IA)',
-          words: ['desarrollador', 'especialista en soporte de TI', 'programador', 'codificador'],
+        professional: {
+          title: 'Experiencia Profesional',
+          items: [
+            {
+              company: 'Arqdigital T.I',
+              position: 'Especialista en Soporte de TI',
+              period: '2024 - Presente',
+              achievements: [
+                'Gestión de infraestructura y administración de entornos de TI con AnyDesk, Microsoft Admin Center, Intune y Azure Entra ID',
+                'Provisión de soporte técnico diverso a colaboradores en temas de red, soporte de hardware de TI y resolución de problemas',
+                'Implementación de soluciones de automatización para infraestructura y demandas de soporte de TI'
+              ]
+            },
+            {
+              company: 'Upwork',
+              position: 'Desarrollador Full-stack Freelance',
+              period: '2023 - Presente',
+              achievements: [
+                'Creación de interfaces de usuario usando HTML, CSS y JavaScript',
+                'Construcción de lógica de servidor y APIs usando Django y Java',
+                'Creación y gestión de bases de datos SQL como PostgreSQL y MySQL para almacenar y recuperar datos',
+                'Integración con APIs de terceros para expandir la funcionalidad (por ejemplo, pasarelas de pago, redes sociales, servicios de mapas)'
+              ]
+            }
+          ]
         },
-        githubCalendar: {
-          header: 'contribuciones',
-          subtext: 'calendario de contribuciones de github'
-        },
-        blog: {
-          header: 'blog',
-          subtext: ''
-        },
-        recentBlog: {
-          header: 'blogs recientes',
-          subtext: ''
-        },
-        uses: {
-          header: 'herramientas',
-          subtext: 'un resumen rápido de lo que uso a diario para programar y algunas estadísticas de codestats.net'
-        },
-        projects: {
-          header: 'proyectos',
-          subtext: 'esta página lista algunos de mis proyectos personales y laborales. cada proyecto tiene una historia; haz clic en el título para leer'
-        },
-        recommendations: {
-          header: 'recomendaciones',
-          subtext: 'qué dicen mis mentores'
-        },
-        achievements: {
-          goals: {
-            header: 'Metas Personales',
-            shortTerm: 'Corto Plazo',
-            midTerm: 'Medio Plazo',
-            longTerm: 'Largo Plazo',
-            shortTermItems: [
-              { icon: '🎯', text: 'Dominar Servicios en la Nube de AWS' },
-              { icon: '💻', text: 'Completar Curso Avanzado de Vue.js' },
-              { icon: '📱', text: 'Desarrollar Aplicaciones Mobile-First' }
-            ],
-            midTermItems: [
-              { icon: '🚀', text: 'Lanzar Producto SaaS Personal' },
-              { icon: '📊', text: 'Expandir Negocio Freelance' },
-              { icon: '🌐', text: 'Contribuir a Proyectos Open Source' }
-            ],
-            longTermItems: [
-              { icon: '⭐', text: 'Convertirse en Desarrollador Senior' },
-              { icon: '🎓', text: 'Completar Maestría' },
-              { icon: '🌟', text: 'Iniciar Consultoría Tecnológica' }
-            ]
-          },
-          professional: {
-            title: 'Experiencia Profesional',
-            items: [
-              {
-                company: 'Arqdigital T.I',
-                position: 'Especialista en Soporte de TI',
-                period: '2022 - Presente',
-                achievements: [
-                  'Gestionó infraestructura y servicios en la nube',
-                  'Proporcionó soporte técnico a clientes',
-                  'Implementó soluciones de automatización'
-                ]
-              },
-              {
-                company: 'Upwork',
-                position: 'Especialista en Soporte de TI',
-                period: '2021 - Presente',
-                achievements: [
-                  'Proporcionó soporte técnico a clientes',
-                  'Implementó soluciones de automatización'
-                ]
-              }
-            ]
-          },
-          education: {
-            header: 'Trayectoria Académica',
-            current: [
-              {
-                institution: 'Tu Universidad',
-                program: 'Ciencia de la Computación',
-                graduation: 'Graduación Esperada: 2024'
-              }
-            ],
-            currentTitle: 'Educación Actual',
-            achievementsTitle: 'Logros Académicos',
-            achievements: [
-              {
-                icon: '🏆',
-                title: 'Lista de Honor',
-                description: 'Mantuvo un alto rendimiento académico'
-              },
-              {
-                icon: '🎖️',
-                title: 'Ganador de Hackathon',
-                description: 'Primer lugar en hackathon universitario'
-              }
-            ]
-          }
+        education: {
+          header: 'Trayectoria Académica',
+          current: [
+            {
+              institution: "CEMI Cruzeiro",
+              program: "Curso Técnico en Informática para Internet",
+              graduation: "Graduación Esperada: 2025"
+            }
+          ],
+          currentTitle: 'Educación Actual',
+          achievementsTitle: 'Logros',
+          achievements: [
+            {
+              icon: "🏆",
+              title: "Finalista de la AWS Builders League",
+              description: "3er lugar en la AWS Builders League 2024: Edición Generative AI."
+            },
+            {
+              icon: '⛅',
+              title: "Primera certificación en Cloud emitida por organización de TI",
+              description: 'Recientemente obtuvo la certificación AWS Certified Cloud Practitioner'
+            }
+          ]
         }
       }
     }
   }
+}

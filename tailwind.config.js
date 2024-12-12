@@ -11,17 +11,48 @@ module.exports = {
       colors: {
         'black': '#12151E',
         'hot-pink': '#fd2d78',
-        'gray-900': '#18191a',
-        'gray-800': '#212324',
-        'gray-700': '#2F3133',
-        'gray-600': '#404345',
-        'gray-500': '#55585A',
-        'gray-400': '#797B7C',
-        'gray-300': '#A7A8A8',
-        'gray-200': '#D3D4D4',
-        'gray-100': '#ECECEC',
-        'gray-50': '#F4F4F4',
-      },
+        'white': '#FFFFFF',  // Add this if not already present
+        'gray-900': {
+          DEFAULT: '#18191a',
+          light: '#F4F4F4'  // light mode version
+        },
+        'gray-800': {
+          DEFAULT: '#212324',
+          light: '#ECECEC'
+        },
+        'gray-700': {
+          DEFAULT: '#2F3133',
+          light: '#D3D4D4'
+        },
+        'gray-600': {
+          DEFAULT: '#404345',
+          light: '#A7A8A8'
+        },
+        'gray-500': {
+          DEFAULT: '#55585A',
+          light: '#797B7C'
+        },
+        'gray-400': {
+          DEFAULT: '#797B7C',
+          light: '#55585A'
+        },
+        'gray-300': {
+          DEFAULT: '#A7A8A8',
+          light: '#404345'
+        },
+        'gray-200': {
+          DEFAULT: '#D3D4D4',
+          light: '#2F3133'
+        },
+        'gray-100': {
+          DEFAULT: '#ECECEC',
+          light: '#212324'
+        },
+        'gray-50': {
+          DEFAULT: '#F4F4F4',
+          light: '#18191a'
+        },
+      },      
       typography: (theme) => ({
         dark: {
           css: [

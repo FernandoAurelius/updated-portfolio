@@ -14,7 +14,7 @@
               <li v-for="(goal, index) in $t(`achievements.goals.${goalType}Items`)" :key="index"
                   class="flex items-center">
                 <span class="mr-2">{{ goal.icon }}</span>
-                <span>{{ goal.text }}</span>
+                <span class="font-semibold">{{ goal.text }}</span>
               </li>
             </ul>
           </div>
