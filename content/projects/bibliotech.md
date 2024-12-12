@@ -2,7 +2,7 @@
 id: 3
 title: bibliotech
 description: feito para aumentar o engajamento dos estudantes na leitura com uma interface amigável de gerenciamento
-tech: python django html css bootstrap aws
+tech: django bootstrap aws
 logo: https://img.icons8.com/dusk/64/library.png
 website: https://bt.floresdev.com.br
 github: https://github.com/FernandoAurelius/library-system-django

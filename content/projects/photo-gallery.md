@@ -2,7 +2,7 @@
 id: 1
 title: photo gallery
 description: galeria de fotos interativa e dinâmica com tecnologias full-stack com fins de webdesign (freelance)
-tech: python django html css bootstrap aws
+tech: django bootstrap aws
 logo: https://img.icons8.com/ios-filled/100/apple-camera.png
 website: https://gallery.floresdev.com.br
 github: https://github.com/FernandoAurelius/photo-gallery
