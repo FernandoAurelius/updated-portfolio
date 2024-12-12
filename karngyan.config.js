@@ -124,7 +124,8 @@ export default {
       },
       projects: {
         header: 'projects',
-        subtext: 'this page lists some of my personal and work projects. every project has some story, click on the title to read'
+        subtext: 'this page lists some of my personal and work projects. every project has some story, click on the title to read',
+        languageNote: 'note: most content on this page is only available in portuguese. you can use browser-based tools like Google Translate to assist with translation. 🙏😄'
       },
       recommendations: {
         header: 'recommendations',
@@ -239,7 +240,8 @@ export default {
       },
       projects: {
         header: 'projetos',
-        subtext: 'esta página lista alguns dos meus projetos pessoais e de trabalho. todo projeto tem uma história; clique no título para ler'
+        subtext: 'esta página lista alguns dos meus projetos pessoais e de trabalho. todo projeto tem uma história; clique no título para ler',
+        languageNote: 'nota: a maior parte do conteúdo desta página só está disponível em português. você pode usar ferramentas baseadas em navegador, como o Google Tradutor, para ajudar na tradução. 🙏😄'
       },
       recommendations: {
         header: 'recomendações',
@@ -354,7 +356,8 @@ export default {
       },
       projects: {
         header: 'proyectos',
-        subtext: 'esta página lista algunos de mis proyectos personales y laborales. cada proyecto tiene una historia; haz clic en el título para leer'
+        subtext: 'esta página lista algunos de mis proyectos personales y laborales. cada proyecto tiene una historia; haz clic en el título para leer',
+        languageNote: 'nota: la mayoría de la contenido de esta página solo está disponible en portugués. puedes usar herramientas basadas en navegador, como el Google Traductor, para ayudar en la traducción. 🙏😄'
       },
       recommendations: {
         header: 'recomendaciones',

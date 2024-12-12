@@ -1,25 +1,41 @@
 <template>
-  <div class="relative max-w-7xl border-r border-l border-dashed border-gray-700 py-6 mx-auto">
-    <div data-aos="fade-up" class="text-center">
-      <h2 class="text-2xl tracking-tight font-extrabold text-gray-200">
-        {{ $t('projects.header') }}
-      </h2>
-      <p class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7 text-gray-400">
-        {{ $t('projects.subtext') }}
-      </p>
-    </div>
+  <div class="relative max-w-7xl py-6 mx-auto">
+    <!-- Container with adaptive border colors -->
+    <div class="border-r border-l border-dashed border-gray-200 dark:border-gray-700">
+      <!-- Header Section -->
+      <div data-aos="fade-up" class="text-center">
+        <h2 class="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-gray-100">
+          {{ $t('projects.header') }}
+        </h2>
+        <p class="mt-2 px-2 max-w-2xl mx-auto text-sm leading-7 text-gray-600 dark:text-gray-400">
+          {{ $t('projects.subtext') }}
+        </p>
+      </div>
+      <!-- Language Note -->
+      <div data-aos="fade-in" class="text-center mt-4 px-4 text-xs leading-6 text-hot-pink">
+        {{ $t('projects.languageNote') }}
+      </div>
 
-    <div data-aos="zoom-in" class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4">
-      <nav class="flex flex-wrap items-center justify-center flex-row space-x-2 sm:space-x-4" aria-label="Tabs">
-        <button @click="currentTech = tech" :class="{ 'bg-gray-900 text-gray-300': tech === currentTech }" v-for="tech in techs" :key="tech"
-                class="flex text-gray-300 focus:outline-none focus:ring-transparent focus:ring-offset-transparent hover:text-hot-pink px-3 py-2 font-medium text-sm rounded-xl">
-          {{ tech }}
-        </button>
-      </nav>
-    </div>
 
-    <div data-aos="zoom-in" class="mt-5 gap-4 mx-4 grid max-w-none lg:grid-cols-3">
-      <ProjectCard class="hover:-rotate-12" v-for="project in projectsByTechs" :key="project.slug" :project="project" />
+      <!-- Technology Filter Tabs -->
+      <div data-aos="zoom-in"
+        class="select-none px-4 items-center justify-center sm:justify-start overflow-hidden flex pt-4">
+        <nav class="flex flex-wrap items-center justify-center flex-row space-x-2 sm:space-x-4" aria-label="Tabs">
+          <button v-for="tech in techs" :key="tech" @click="currentTech = tech" :class="{
+            'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100': tech === currentTech,
+            'text-gray-600 dark:text-gray-400 hover:text-hot-pink dark:hover:text-hot-pink': tech !== currentTech
+          }"
+            class="flex px-3 py-2 font-medium text-sm rounded-xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-hot-pink focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+            {{ tech }}
+          </button>
+        </nav>
+      </div>
+
+      <!-- Projects Grid -->
+      <div data-aos="zoom-in" class="mt-5 gap-4 mx-4 grid max-w-none lg:grid-cols-3">
+        <ProjectCard v-for="project in projectsByTechs" :key="project.slug" :project="project"
+          class="hover:-rotate-12 transition-transform duration-300" />
+      </div>
     </div>
   </div>
 </template>
@@ -72,6 +88,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -16,7 +16,6 @@
     <div ref="buttons" class="ui grey three item inverted bottom fixed menu transition hidden">
       <a class="item" @click="scale -= scale > 0.2 ? 0.1 : 0">
         <i class="left chevron icon" />
-          Zoom -
       </a>
       <a class="ui active item">
         {{ formattedZoom }} %

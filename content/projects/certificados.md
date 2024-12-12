@@ -1,8 +1,9 @@
 ---
 id: 2
 title: repositório de certificados
-description: Organização centralizada de certificados em desenvolvimento de software, cloud computing e suporte de TI.
-tech: Git, GitHub, Markdown
+image: https://ff-portfolio.s3.us-east-1.amazonaws.com/Captura+de+tela+2024-12-12+164213.png
+description: organização centralizada de certificados em desenvolvimento de software, cloud computing e suporte de TI.
+tech: git github markdown
 logo: /images/icons8-certificado-100.png
 github: https://github.com/FernandoAurelius/certificates
 twitter: _floresdev

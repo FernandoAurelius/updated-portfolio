@@ -1,16 +1,17 @@
 <template>
-  <div class="min-h-screen bg-white dark:bg-gray-900">
+  <div class="flex flex-col min-h-screen bg-white dark:bg-gray-900">
     <ThemeToggle />
     <TheNavBar />
-    <Nuxt />
+    <main class="flex-grow">
+      <Nuxt />
+    </main>
     <TheFooter />
   </div>
 </template>
 
 <script>
-import ThemeToggle from '~/components/ThemeToggle.vue'
-
 export default {
+  name: 'DefaultLayout',
   components: {
     ThemeToggle
   }
