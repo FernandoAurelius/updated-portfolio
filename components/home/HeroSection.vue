@@ -22,7 +22,7 @@
                 <p class="mt-3 text-base text-gray-300 sm:mt-5">
                   {{ $t('hero.description') }}
                 </p>
-                <p v-if="$config.workedAt.enabled" class="mt-8 text-sm text-white lowercase tracking-wide font-semibold sm:mt-10">Worked at</p>
+                <p v-if="$config.workedAt.enabled" class="mt-8 text-sm text-white lowercase tracking-wide font-semibold sm:mt-10">Worked at | Onde trabalhei | Donde trabajé</p>
                 <div v-if="$config.workedAt.enabled" class="mt-5 w-full sm:mx-auto lg:ml-0">
                   <div class="flex flex-wrap space-x-1 items-start items-center space-x-4 md:space-x-10">
                     <div v-for="(firm, index) in $config.workedAt.meta" :key="index">
