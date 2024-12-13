@@ -50,6 +50,10 @@ const create = async (feed) => {
 const nuxtConfig = {
 
   publicRuntimeConfig: config,
+  
+  generate: {
+    dir: 'dist' // Define o diretório de saída para "dist", que é aceito pela Vercel
+  },
 
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
