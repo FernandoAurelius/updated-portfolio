@@ -67,7 +67,7 @@ const nuxtConfig = {
   head: {
     title: `home -- ${config.name}`,
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-br'
     },
     meta: [
       { charset: 'utf-8' },
