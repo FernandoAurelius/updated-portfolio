@@ -57,7 +57,7 @@
       </section>
       
       <!-- Personal Goals Section -->
-      <section class="mb-12">
+      <section class="mt-12">
         <h2 class="text-2xl font-bold text-indigo-600 mb-6">{{ $t('achievements.goals.header') }}</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div v-for="goalType in goalTypes" :key="goalType"

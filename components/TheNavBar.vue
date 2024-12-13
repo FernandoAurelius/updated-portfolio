@@ -48,12 +48,7 @@
           </div>
         </div>
         <div class="hidden md:flex flex-row space-x-2 items-center justify-center">
-          <div v-if="$config.laguageSwitcher.enabled">
-            <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)"
-              class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
-              {{ locale.name }}
-            </nuxt-link>
-          </div>
+          <LanguageSelector v-if="$config.laguageSwitcher.enabled" />
           <div v-if="$config.firebase.enabled">
             <div v-if="!user" @click="signInUser"
               class="active cursor-pointer text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-bold transition-colors">
@@ -82,51 +77,53 @@
       <div v-show="mobileMenuOpen"
         class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-800">
-          <div class="rounded-lg overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
-            <div class="px-5 pt-4 flex items-center justify-between">
-              <div @click="mobileMenuOpen = false">
-                <nuxt-link exact :to="localePath('/')">
-                  <TheLogo class="text-3xl w-auto" />
-                </nuxt-link>
-              </div>
-              <div class="-mr-2">
-                <button @click="mobileMenuOpen = false" type="button"
-                  class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                  aria-label="Close menu">
-                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div @click="mobileMenuOpen = false">
+              <nuxt-link exact :to="localePath('/')">
+                <TheLogo class="text-3xl w-auto" />
+              </nuxt-link>
             </div>
-            <div @click="mobileMenuOpen = false" class="flex flex-col space-y-1 px-2 pt-2 pb-3">
-              <nuxt-link exact :to="localePath('/')"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.home') }}</nuxt-link>
-              <nuxt-link v-show="$config.blog.enabled" :to="localePath('/blog')"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.blog') }}</nuxt-link>
-              <nuxt-link v-show="$config.projects.enabled" :to="localePath('/projects')"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.projects') }}</nuxt-link>
-              <nuxt-link v-show="$config.uses.enabled" :to="localePath('/uses')"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.uses') }}</nuxt-link>
-              <nuxt-link v-show="$config.resume.enabled" :to="localePath('/resume')"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.resume') }}</nuxt-link>
-              <a v-show="$config.buyMeACoffee.enabled" :href="$config.buyMeACoffee.url" target="_blank" rel="noreferrer"
-                class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
-                role="menuitem">{{ $t('nav.buyMeACoffee') }}</a>
+            <div class="-mr-2">
+              <button @click="mobileMenuOpen = false" type="button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+                aria-label="Close menu">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <div v-if="$config.firebase.enabled">
-              <div v-if="!user" @click="signInUser"
-                class="block w-full px-5 py-3 text-center font-medium text-gray-200 bg-indigo-700 hover:bg-indigo-600 hover:text-gray-200 focus:outline-none focus:bg-indigo-600 focus:text-gray-100 transition duration-150 ease-in-out">
-                {{ $t('nav.signIn') }}</div>
-              <div v-else @click="signOutUser"
-                class="block w-full px-5 py-3 text-center font-medium text-gray-200 bg-indigo-700 hover:bg-indigo-600 hover:text-gray-200 focus:outline-none focus:bg-indigo-600 focus:text-gray-100 transition duration-150 ease-in-out">
-                {{ $t('nav.signOut') }}</div>
+          </div>
+          <div @click="mobileMenuOpen = false" class="flex flex-col space-y-1">
+            <nuxt-link exact :to="localePath('/')"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.home') }}</nuxt-link>
+            <nuxt-link v-show="$config.blog.enabled" :to="localePath('/blog')"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.blog') }}</nuxt-link>
+            <nuxt-link v-show="$config.projects.enabled" :to="localePath('/projects')"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.projects') }}</nuxt-link>
+            <nuxt-link v-show="$config.uses.enabled" :to="localePath('/uses')"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.uses') }}</nuxt-link>
+            <nuxt-link v-show="$config.resume.enabled" :to="localePath('/resume')"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.resume') }}</nuxt-link>
+            <a v-show="$config.buyMeACoffee.enabled" :href="$config.buyMeACoffee.url" target="_blank" rel="noreferrer"
+              class="flex px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition duration-150 ease-in-out"
+              role="menuitem">{{ $t('nav.buyMeACoffee') }}</a>
+            <div v-show="$config.laguageSwitcher.enabled" class="relative px-3 py-2 overflow-visible" @click.stop>
+              <LanguageSelector />
             </div>
+
+          </div>
+          <div v-if="$config.firebase.enabled">
+            <div v-if="!user" @click="signInUser"
+              class="block w-full px-5 py-3 text-center font-medium text-gray-200 bg-indigo-700 hover:bg-indigo-600 hover:text-gray-200 focus:outline-none focus:bg-indigo-600 focus:text-gray-100 transition duration-150 ease-in-out">
+              {{ $t('nav.signIn') }}</div>
+            <div v-else @click="signOutUser"
+              class="block w-full px-5 py-3 text-center font-medium text-gray-200 bg-indigo-700 hover:bg-indigo-600 hover:text-gray-200 focus:outline-none focus:bg-indigo-600 focus:text-gray-100 transition duration-150 ease-in-out">
+              {{ $t('nav.signOut') }}</div>
           </div>
         </div>
       </div>
@@ -136,8 +133,9 @@
 
 <script>
 import TheLogo from "~/components/logos/TheLogo";
+import LanguageSelector from '~/components/LanguageSelector.vue'
 export default {
-  components: { TheLogo },
+  components: { TheLogo, LanguageSelector },
   computed: {
     user() {
       return this.$store.state.user
