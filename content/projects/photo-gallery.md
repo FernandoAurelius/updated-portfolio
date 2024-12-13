@@ -85,5 +85,5 @@ O desenvolvimento iniciou com a modelagem de dados e o planejamento das principa
   - Configurar o ambiente de produção para alta performance.
   - Garantir a responsividade do layout em todos os dispositivos.
 
-🔗 [Confira a DEMO na AWS](https://bt.floresdev.com.br)
+🔗 [Confira a DEMO na AWS](https://gallery.floresdev.com.br)
 
