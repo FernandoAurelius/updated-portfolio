@@ -158,7 +158,7 @@ export default {
           items: [
             {
               company: 'Arqdigital T.I',
-              position: 'IT Support Specialist',
+              position: 'IT Apprentice',
               period: '2024 - Present',
               achievements: [
                 'Managed infrastructure and IT environment administration with AnyDesk, Microsoft Admin Center, Intune, and Azure Entra ID',
@@ -274,7 +274,7 @@ export default {
           items: [
             {
               company: 'Arqdigital T.I',
-              position: 'Especialista em Suporte de TI',
+              position: 'Jovem Aprendiz de TI',
               period: '2024 - Presente',
               achievements: [
                 'Gerenciamento de infraestrutura e administração de ambientes de TI com AnyDesk, Microsoft Admin Center, Intune e Azure Entra ID',
@@ -390,7 +390,7 @@ export default {
           items: [
             {
               company: 'Arqdigital T.I',
-              position: 'Especialista en Soporte de TI',
+              position: 'Aprendiz de TI',
               period: '2024 - Presente',
               achievements: [
                 'Gestión de infraestructura y administración de entornos de TI con AnyDesk, Microsoft Admin Center, Intune y Azure Entra ID',
